@@ -1,13 +1,9 @@
 name: Build & Push Docker Image CI
 
 on:
-  pull_request:
-    branches:
-    - main
-#on:
- # push:
-  #  tags:
-   #   - "v*,*,*"
+  push:
+     tags:
+       - "v*,*,*"
   
 jobs:
   build_and_push:
@@ -21,8 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set env
-    - name: Show environment variables
-      run: echo "VERSION=${GITHUB_REF#refs/tags/*}" >> $GITHUB_ENV|
+      run: echo "VERSION=${GITHUB_REF#refs/tags/*}" >> $GITHUB_ENV
     - name: Show environment variables
       run: |
         echo "DOCKER_IMAGE_NAME: ${DOCKER_IMAGE_NAME}"
