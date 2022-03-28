@@ -1,4 +1,3 @@
-#v.1
 FROM fedora:35
 MAINTAINER study
 ENV TZ=Europe/Moscow
