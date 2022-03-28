@@ -1,9 +1,13 @@
 name: Build & Push Docker Image CI
+#name: Build & Push Docker image with latest tag
 
 on:
   push:
-     tags:
-       - "v*,*,*"
+    branches: [ main ]
+#on:
+ # push:
+  #   tags:
+   #    - "v*,*,*"
   
 jobs:
   build_and_push:
