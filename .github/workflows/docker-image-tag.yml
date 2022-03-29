@@ -24,7 +24,7 @@ jobs:
         echo "DOCKER_IMAGE_NAME: ${DOCKER_IMAGE_NAME}"
         echo "VERSION: ${VERSION}"
     - name: Docker login
-      run: docker login -u "${DOCKER_LOGIN}" --password-stdin "${DOCKER_PASSWORD}"
+      run: docker login -u "${DOCKER_LOGIN}" -p "${DOCKER_PASSWORD}"
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag "${DOCKER_IMAGE_NAME}:${{ env.VERSION }}"
     - name: Push the Docker image
