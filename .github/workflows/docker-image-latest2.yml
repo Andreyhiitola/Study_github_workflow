@@ -12,7 +12,7 @@ jobs:
 
     runs-on: 
       - self-hosted
-      - level1
+      - label1
     env:
       DOCKER_IMAGE_NAME: "andreysagurov/nginx"
       DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN  }}
