@@ -9,9 +9,9 @@ jobs:
 
   build_and_push:
 
-    runs-on:               #ubuntu-latest
-       - self-hosted
-       - label1
+    runs-on: ubuntu-latest
+      # - self-hosted
+      # - label1
     env:
       DOCKER_IMAGE_NAME: "andreysagurov/nginx"
       DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN  }}
