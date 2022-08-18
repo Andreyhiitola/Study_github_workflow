@@ -11,6 +11,7 @@ jobs:
   build_and_push:
 
     runs-on:  ubuntu-latest
+   
     # - self-hosted
     # - label1
     env:
